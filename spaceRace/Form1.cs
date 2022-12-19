@@ -12,16 +12,21 @@ namespace spaceRace
 {
     public partial class spaceRaceGame : Form
     {
+        Random randGen = new Random();
         int playerSpeed = 5;
         int playerSize = 48;
+        int astroidSpeed = 10;
         bool wDown = false;
         bool sDown = false;
         bool upArrowDown = false;
         bool downArrowDown = false;
         Rectangle player1 = new Rectangle(300, 400, 48, 48);
         Rectangle player2 = new Rectangle(500, 400, 48, 48);
+        List<Rectangle> astroids = new List<Rectangle>();
         Image rocketImage = Properties.Resources.rocket_icon;
-
+        SolidBrush blackBrush = new SolidBrush(Color.White);
+        int generateRecValue;
+        int randValue;
         public spaceRaceGame()
         {
             InitializeComponent();
@@ -71,6 +76,10 @@ namespace spaceRace
         {
             e.Graphics.DrawImage(rocketImage, player1);
             e.Graphics.DrawImage(rocketImage, player2);
+            for (int i = 0; i < astroids.Count; i++)
+            {
+                e.Graphics.FillRectangle(blackBrush, astroids[i]);
+            }
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
@@ -109,6 +118,24 @@ namespace spaceRace
             if (player2.Y >= 465 - playerSize)
             {
                 player2.Y = 465 - playerSize - 1;
+            }
+
+            //Generate Astroids
+           
+           // randValue = randGen.Next(0, this.Height);
+
+            generateRecValue = randGen.Next(1, 101);
+            if (generateRecValue < 51)
+            {
+
+
+                astroids.Add(new Rectangle(0, randGen.Next(0, this.Height), 30, 10));
+                for (int i = 0; i < astroids.Count; i++)
+                {
+
+                    int x = astroids[i].X + astroidSpeed;
+                    astroids[i] = new Rectangle(x, astroids[i].Y, 30, 10);
+                }
             }
             this.Refresh();
         }

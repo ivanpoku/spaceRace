@@ -86,5 +86,11 @@
   <ItemGroup>
     <None Include="Resources\rocket-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\521620__lucas-post__electronic-bomb.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\391539__unlistenable__electro-win-sound.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

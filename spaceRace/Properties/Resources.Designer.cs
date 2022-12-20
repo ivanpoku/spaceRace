@@ -61,6 +61,24 @@ namespace spaceRace.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _391539__unlistenable__electro_win_sound {
+            get {
+                return ResourceManager.GetStream("_391539__unlistenable__electro_win_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream _521620__lucas_post__electronic_bomb {
+            get {
+                return ResourceManager.GetStream("_521620__lucas_post__electronic_bomb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap rocket_icon {

@@ -98,27 +98,33 @@ namespace spaceRace
             //Game Start Countdown
             if (currentTime == 20)
             {
-                outputLabel.Text = "5";
+                outputLabel.Text = $"Space Race";
+                outputLabel.Text += $"\n5";
             }
             else if (currentTime == 40)
             {
-                outputLabel.Text = "4";
+                outputLabel.Text = $"Space Race";
+                outputLabel.Text += $"\n4";
             }
             else if (currentTime == 60)
             {
-                outputLabel.Text = "3";
+                outputLabel.Text = $"Space Race";
+                outputLabel.Text += $"\n3";
             }
             else if (currentTime == 80)
             {
-                outputLabel.Text = "2";
+                outputLabel.Text = $"Space Race";
+                outputLabel.Text += $"\n2";
             }
             else if (currentTime == 100)
             {
-                outputLabel.Text = "1";
+                outputLabel.Text = $"Space Race";
+                outputLabel.Text += $"\n1";
             }
             else if (currentTime == 120)
             {
-                outputLabel.Text = "GO";
+                outputLabel.Text = $"Space Race";
+                outputLabel.Text += $"\nGO";
             }
             else if (currentTime == 140)
             {
